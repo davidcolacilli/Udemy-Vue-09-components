@@ -1,38 +1,19 @@
 <template>
   <div id="app-container">
-    <plan v-for="pla in plans" :name="pla.name" :price="pla.price" :key="pla.name"/>
+    <header-component heading="Plans"/>
+    <plans/>
   </div>
 </template>
 
 <script>
-import Plan from './components/Plan.vue'
+import Plans from './components/Plans.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    Plan
-  },
-  data() {
-    return {
-      plans: [
-        {
-          name: 'Beginner',
-          price: 2
-        },
-        {
-          name: 'Intermediate',
-          price: 4
-        },
-        {
-          name: 'Advanced',
-          price: 6
-        },
-        {
-          name: 'Pro',
-          price: 10
-        },
-      ]
-    }
+    Plans,
+    HeaderComponent
   }
 }
 </script>
