@@ -1,27 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app-container">
+    <plan v-for="pla in plans" :name="pla.name" :price="pla.price" :key="pla.name"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Plan from './components/Plan.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Plan
+  },
+  data() {
+    return {
+      plans: [
+        {
+          name: 'Beginner',
+          price: 2
+        },
+        {
+          name: 'Intermediate',
+          price: 4
+        },
+        {
+          name: 'Advanced',
+          price: 6
+        },
+        {
+          name: 'Pro',
+          price: 10
+        },
+      ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
+#app-container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
