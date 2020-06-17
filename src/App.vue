@@ -1,7 +1,8 @@
 <template>
   <div id="app-container">
-    <header-component heading="Plans"/>
+    <header-component heading="asdfg"/>
     <plans/>
+    <p></p>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ export default {
 #app-container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px auto 0;
+  max-width: 800px;
 }
 </style>
